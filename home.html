@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lucy Rowland | Data Analyst & Software Engineer</title>
+		<meta
+			name="description"
+			content="Lucy Rowland - data analyst, engineer, software developer, and game engine enthusiast."
+		/>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #f8fafc;
+				--muted: #b3b3b3;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 1024px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.7;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				background: rgba(10, 10, 10, 0.95);
+				border-bottom: 2px solid var(--line);
+				z-index: 10;
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+			}
+
+			nav ul {
+				list-style: none;
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3.5rem 1.5rem 4rem;
+				display: grid;
+				gap: 3rem;
+			}
+
+			section {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.hero {
+				border: 2px solid var(--line);
+				padding: 1.8rem;
+				background: var(--card);
+				box-shadow: var(--shadow);
+			}
+
+			.hero h1 {
+				font-size: clamp(2rem, 4vw, 2.8rem);
+				line-height: 1.2;
+			}
+
+			.hero p {
+				color: var(--muted);
+				max-width: 60ch;
+			}
+
+			.actions {
+				display: flex;
+				gap: 0.8rem;
+				flex-wrap: wrap;
+			}
+
+			.button {
+				background: var(--accent);
+				color: #0a0a0a;
+				padding: 0.65rem 1.1rem;
+				border-radius: 4px;
+				font-weight: 700;
+				border: 2px solid var(--accent);
+			}
+
+			.button.secondary {
+				background: transparent;
+				color: var(--text);
+				border: 2px solid var(--line);
+			}
+
+			.grid {
+				display: grid;
+				gap: 1.1rem;
+			}
+
+			.grid.two {
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			}
+
+			.card {
+				background: var(--card);
+				padding: 1.2rem 1.4rem;
+				border-radius: 4px;
+				border: 2px solid var(--line);
+				box-shadow: var(--shadow);
+			}
+
+			.card h3 {
+				margin-bottom: 0.6rem;
+				font-size: 1.05rem;
+				text-transform: uppercase;
+			}
+
+			.list {
+				display: grid;
+				gap: 0.6rem;
+				color: var(--muted);
+			}
+
+			.list strong {
+				color: var(--text);
+			}
+
+			.meta {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			footer {
+				border-top: 2px solid var(--line);
+				padding: 2.5rem 1.5rem 3rem;
+				color: var(--muted);
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			footer p {
+				margin-bottom: 0.6rem;
+			}
+
+			@media (max-width: 720px) {
+				nav {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<h1>Data analyst, software engineer, and game engine enthusiast.</h1>
+				<p>
+					I build data products and tools that turn messy information into
+					actionable insight. I enjoy shipping reliable pipelines, clear
+					dashboards, and experimenting with game systems and engine tooling.
+				</p>
+				<div class="actions">
+					<a class="button" href="mailto:lucyrowland96@gmail.com">Email Me</a>
+					<a class="button secondary" href="https://www.linkedin.com/in/lucyrowland/"
+						>LinkedIn</a
+					>
+				</div>
+				<p class="meta">Vancouver, BC · Open to data and software roles</p>
+			</section>
+
+			<section id="about">
+				<h2>About</h2>
+				<p>
+					I focus on data engineering, analytics, and software development. My
+					background spans sports analytics, product development, and building
+					tools that help teams move faster. I like clean architecture, small
+					iterations, and learning by building.
+				</p>
+			</section>
+
+			<section id="skills">
+				<h2>Skills</h2>
+				<div class="grid two">
+					<div class="card">
+						<h3>Core</h3>
+						<div class="list">
+							<div><strong>Languages:</strong> Python, SQL, TypeScript</div>
+							<div><strong>Analytics:</strong> Data modeling, dashboards, ML basics</div>
+							<div><strong>Platforms:</strong> Power BI, Postgres, Git</div>
+						</div>
+					</div>
+					<div class="card">
+						<h3>Currently Exploring</h3>
+						<div class="list">
+							<div><strong>Game dev:</strong> C#, MonoGame, engine tooling</div>
+							<div><strong>Infra:</strong> Docker, CI/CD, cloud basics</div>
+							<div><strong>Other:</strong> Aseprite, shader basics</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects">
+				<h2>Projects</h2>
+				<div class="grid two">
+					<article class="card">
+						<h3>Dicey Divas</h3>
+						<p class="meta">Game dev · 2024 - Present</p>
+						<p>
+							A dice-rolling game built in MonoGame. Focused on game feel,
+							tooling, and rapid iteration.
+						</p>
+					</article>
+					<article class="card">
+						<h3>BootUp Analytics</h3>
+						<p class="meta">Data platform · 2023 - 2025</p>
+						<p>
+							Custom data analytics for women's football, combining automated
+							pipelines and clear visual outputs.
+						</p>
+					</article>
+					<article class="card">
+						<h3>MLS Analytics Infrastructure</h3>
+						<p class="meta">Leadership · 2022 - 2023</p>
+						<p>
+							Built an analytics program from the ground up, covering scouting,
+							performance, and reporting workflows.
+						</p>
+					</article>
+					<article class="card">
+						<h3>Canada Soccer Data Systems</h3>
+						<p class="meta">International · 2021 - 2022</p>
+						<p>
+							Engineered data storage and dashboards for scouting and match
+							preparation at national-team scale.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="experience">
+				<h2>Experience</h2>
+				<div class="grid">
+					<div class="card">
+						<h3>BootUp Analytics · Data Product Developer</h3>
+						<p class="meta">2023 - 2025 · Vancouver, BC</p>
+						<p>
+							Built custom analytics platforms, automated data pipelines, and
+							visualization workflows for sports organizations.
+						</p>
+					</div>
+					<div class="card">
+						<h3>San Jose Earthquakes · Director of Soccer Analytics</h3>
+						<p class="meta">2022 - 2023 · San Jose, CA</p>
+						<p>
+							Created a data department, mentored analysts, and delivered
+							decision-ready insights across performance and scouting.
+						</p>
+					</div>
+					<div class="card">
+						<h3>Canada Soccer · Lead Data Analyst</h3>
+						<p class="meta">2021 - 2022 · Vancouver, BC</p>
+						<p>
+							Designed data systems for national-team workflows and automated
+							pre-match reporting.
+						</p>
+					</div>
+					<div class="card">
+						<h3>EA Sports · Gameplay Analyst</h3>
+						<p class="meta">2020 · Burnaby, BC</p>
+						<p>
+							Analyzed gameplay data and partnered with producers to improve
+							player experience and balance.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="education">
+				<h2>Education</h2>
+				<div class="card">
+					<h3>Queen's University · BSc (Hons) Computer Science</h3>
+					<p class="meta">2014 - 2019 · Kingston, Ontario</p>
+					<p>
+						Focus on algorithms, databases, data structures, and machine
+						learning. Thesis on data retrieval optimization.
+					</p>
+				</div>
+			</section>
+
+			<section id="contact">
+				<h2>Contact</h2>
+				<div class="card">
+					<p>
+						I am open to data analyst, data engineering, and software developer
+						roles. The best way to reach me is email.
+					</p>
+					<div class="actions">
+						<a class="button" href="mailto:lucyrowland96@gmail.com"
+							>Email Me</a
+						>
+						<a
+							class="button secondary"
+							href="https://www.linkedin.com/in/lucyrowland/"
+							>LinkedIn</a
+						>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Inspired by clean, minimal portfolio layouts.</p>
+			<p>Copyright &copy; Lucy Rowland.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>What I learned building a MonoGame tool | Lucy Rowland</title>
+		<meta
+			name="description"
+			content="Notes from building a small MonoGame tool to speed up iteration."
+		/>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #f8fafc;
+				--muted: #b3b3b3;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 860px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.75;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				background: rgba(10, 10, 10, 0.95);
+				border-bottom: 2px solid var(--line);
+				z-index: 10;
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+			}
+
+			nav ul {
+				list-style: none;
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3.5rem 1.5rem 4rem;
+				display: grid;
+				gap: 2rem;
+			}
+
+			article {
+				background: var(--card);
+				padding: 2rem;
+				border: 2px solid var(--line);
+				box-shadow: var(--shadow);
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			h1 {
+				font-size: clamp(2rem, 4vw, 2.6rem);
+				line-height: 1.2;
+			}
+
+			h2 {
+				font-size: 1.15rem;
+				text-transform: uppercase;
+				margin-top: 1rem;
+			}
+
+			.meta {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			footer {
+				border-top: 2px solid var(--line);
+				padding: 2.5rem 1.5rem 3rem;
+				color: var(--muted);
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			footer p {
+				margin-bottom: 0.6rem;
+			}
+
+			@media (max-width: 720px) {
+				nav {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<ul>
+					<li><a href="index-contrast.html">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="index-contrast.html#projects">Projects</a></li>
+					<li><a href="index-contrast.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<article>
+				<header>
+					<h1>What I learned building a MonoGame tool</h1>
+					<p class="meta">Dec 2025 · 4 min read · Game Dev, MonoGame</p>
+				</header>
+
+				<p>
+					This is a placeholder post. The structure is here so you can replace
+					it with a real entry later.
+				</p>
+
+				<h2>Quick insight #1</h2>
+				<p>
+					Small tools reduce friction. Even a basic editor panel or tweakable
+					config file can turn “hours of iteration” into “minutes of iteration.”
+				</p>
+
+				<h2>Quick insight #2</h2>
+				<p>
+					If you can visualize the data or state in-engine, debugging becomes
+					ten times easier.
+				</p>
+
+				<h2>Quick insight #3</h2>
+				<p>
+					Keep tools close to the workflow. A single keybind can be the
+					difference between “I’ll do this later” and “done.”
+				</p>
+			</article>
+		</main>
+
+		<footer>
+			<p>Back to <a href="blog.html">Blog</a></p>
+			<p>Copyright &copy; Lucy Rowland.</p>
+		</footer>
+	</body>
+</html>

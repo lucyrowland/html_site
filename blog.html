@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lucy Rowland | Blog</title>
+		<meta name="description" content="Writing on data, software, and game dev." />
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #f8fafc;
+				--muted: #b3b3b3;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 1024px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.7;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				background: rgba(10, 10, 10, 0.95);
+				border-bottom: 2px solid var(--line);
+				z-index: 10;
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+			}
+
+			nav ul {
+				list-style: none;
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3.5rem 1.5rem 4rem;
+				display: grid;
+				gap: 2.5rem;
+			}
+
+			.hero {
+				border: 2px solid var(--line);
+				padding: 1.8rem;
+				background: var(--card);
+				box-shadow: var(--shadow);
+				display: grid;
+				gap: 0.8rem;
+			}
+
+			.hero p {
+				color: var(--muted);
+				max-width: 60ch;
+			}
+
+			.post-list {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.post-card {
+				background: var(--card);
+				padding: 1.2rem 1.4rem;
+				border-radius: 4px;
+				border: 2px solid var(--line);
+				box-shadow: var(--shadow);
+				display: grid;
+				gap: 0.6rem;
+			}
+
+			.post-card h2 {
+				font-size: 1.1rem;
+				text-transform: uppercase;
+			}
+
+			.meta {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			.tag {
+				display: inline-block;
+				border: 1px solid var(--line);
+				padding: 0.1rem 0.5rem;
+				border-radius: 4px;
+				font-size: 0.8rem;
+				margin-right: 0.4rem;
+				color: var(--muted);
+			}
+
+			footer {
+				border-top: 2px solid var(--line);
+				padding: 2.5rem 1.5rem 3rem;
+				color: var(--muted);
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			footer p {
+				margin-bottom: 0.6rem;
+			}
+
+			@media (max-width: 720px) {
+				nav {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="home.html#projects">Projects</a></li>
+					<li><a href="home.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<h1>Blog</h1>
+				<p>
+					Notes on analytics, software delivery, and game systems. Short,
+					practical posts as I build.
+				</p>
+			</section>
+
+			<section class="post-list">
+				<article class="post-card">
+					<h2><a href="blog-post-1.html">From raw data to a usable dashboard</a></h2>
+					<p class="meta">Jan 2026 · 6 min read</p>
+					<p>
+						A quick walkthrough of how I scope a data problem, build a pipeline,
+						and ship a dashboard that a team actually uses.
+					</p>
+					<div>
+						<span class="tag">Data</span>
+						<span class="tag">Dashboards</span>
+						<span class="tag">Process</span>
+					</div>
+				</article>
+
+				<article class="post-card">
+					<h2><a href="blog-post-2.html">What I learned building a MonoGame tool</a></h2>
+					<p class="meta">Dec 2025 · 4 min read</p>
+					<p>
+						Why building small tools for yourself makes game dev faster and more
+						fun.
+					</p>
+					<div>
+						<span class="tag">Game Dev</span>
+						<span class="tag">MonoGame</span>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<p>Simple static blog. Add posts by creating new HTML files.</p>
+			<p>Copyright &copy; Lucy Rowland.</p>
+		</footer>
+	</body>
+</html>
