@@ -90,6 +90,28 @@
 				gap: 1.2rem;
 			}
 
+			.about {
+				grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+				align-items: start;
+			}
+
+			.about-content {
+				display: grid;
+				gap: 1rem;
+				max-width: 72ch;
+			}
+
+			.about-photo {
+				width: 100%;
+				max-width: 260px;
+				border-radius: 8px;
+				border: 3px solid var(--accent);
+				box-shadow: var(--shadow);
+				justify-self: right;
+				margin-top: 0.75rem;
+				filter: grayscale(50%);
+			}
+
 			.hero {
 				border: 2px solid var(--line);
 				padding: 1.8rem;
@@ -225,22 +247,73 @@
 					dashboards, and experimenting with game systems and engine tooling.
 				</p>
 				<div class="actions">
-					<a class="button" href="/cdn-cgi/l/email-protection#b7dbc2d4cec5d8c0dbd6d9d38e81f7d0dad6dedb99d4d8da">Email Me</a>
+					<a class="button" href="mailto:lucyrowland96@gmail.com">Email Me</a>
 					<a class="button secondary" href="https://www.linkedin.com/in/lucyrowland/"
-						>LinkedIn</a
-					>
+						>LinkedIn</a>
+					<a class="button secondary" href="https://github.com/lucyrowland"
+						>GitHub</a>
 				</div>
 				<p class="meta">Vancouver, BC · Open to data and software roles</p>
 			</section>
 
-			<section id="about">
-				<h2>About</h2>
-				<p>
-					I focus on data engineering, analytics, and software development. My
-					background spans sports analytics, product development, and building
-					tools that help teams move faster. I like clean architecture, small
-					iterations, and learning by building.
-				</p>
+			<section id="about" class="about">
+				<div class="about-content">
+					<h2>About</h2>
+					<p>
+						I focus on data engineering, analytics, and software development. My
+						background spans sports analytics, product development, and building
+						tools that help teams move faster. I like clean architecture, small
+						iterations, and learning by building.
+					</p>
+					<p>
+						In my free time, I enjoy reading, cooking, video games, and RuPaul's
+						Drag Race.
+					</p>
+					<p>My dog's name is Mango. </p>
+				</div>
+				<img
+					class="about-photo"
+					src="mango and me cropped.jpg"
+					alt="Lucy and Mango"
+				/>
+			</section>
+
+			<section id="experience">
+				<h2>Experience</h2>
+				<div class="grid">
+					<a class="card card-link" href="bootup-analytics.html">
+						<h3>BootUp Analytics · Data Product Developer</h3>
+						<p class="meta">2023 - 2025 · Vancouver, BC</p>
+						<p>
+							Built custom analytics platforms, automated data pipelines, and
+							visualization workflows for sports organizations.
+						</p>
+					</a>
+					<a class="card card-link" href="san-jose-earthquakes.html">
+						<h3>San Jose Earthquakes · Director of Soccer Analytics</h3>
+						<p class="meta">2022 - 2023 · San Jose, CA</p>
+						<p>
+							Created a data department, mentored analysts, and delivered
+							decision-ready insights across performance and scouting.
+						</p>
+					</a>
+					<a class="card card-link" href="canada-mens-soccer-team.html">
+						<h3>Canada Men's Soccer Team · Lead Data Analyst</h3>
+						<p class="meta">2021 - 2022 · Vancouver, BC</p>
+						<p>
+							Designed data systems for national-team workflows and automated
+							pre-match reporting.
+						</p>
+					</a>
+					<div class="card">
+						<h3>EA Sports · Gameplay Analyst</h3>
+						<p class="meta">2020 · Burnaby, BC</p>
+						<p>
+							Analyzed gameplay data and partnered with producers to improve
+							player experience and balance.
+						</p>
+					</div>
+				</div>
 			</section>
 
 			<section id="skills">
@@ -303,44 +376,6 @@
 				</div>
 			</section>
 
-			<section id="experience">
-				<h2>Experience</h2>
-				<div class="grid">
-					<a class="card card-link" href="bootup-analytics.html">
-						<h3>BootUp Analytics · Data Product Developer</h3>
-						<p class="meta">2023 - 2025 · Vancouver, BC</p>
-						<p>
-							Built custom analytics platforms, automated data pipelines, and
-							visualization workflows for sports organizations.
-						</p>
-					</a>
-					<a class="card card-link" href="san-jose-earthquakes.html">
-						<h3>San Jose Earthquakes · Director of Soccer Analytics</h3>
-						<p class="meta">2022 - 2023 · San Jose, CA</p>
-						<p>
-							Created a data department, mentored analysts, and delivered
-							decision-ready insights across performance and scouting.
-						</p>
-					</a>
-					<a class="card card-link" href="canada-mens-soccer-team.html">
-						<h3>Canada Men's Soccer Team · Lead Data Analyst</h3>
-						<p class="meta">2021 - 2022 · Vancouver, BC</p>
-						<p>
-							Designed data systems for national-team workflows and automated
-							pre-match reporting.
-						</p>
-					</a>
-					<div class="card">
-						<h3>EA Sports · Gameplay Analyst</h3>
-						<p class="meta">2020 · Burnaby, BC</p>
-						<p>
-							Analyzed gameplay data and partnered with producers to improve
-							player experience and balance.
-						</p>
-					</div>
-				</div>
-			</section>
-
 			<section id="education">
 				<h2>Education</h2>
 				<div class="card">
@@ -361,17 +396,19 @@
 						roles. The best way to reach me is email.
 					</p>
 					<div class="actions">
-						<a class="button" href="/cdn-cgi/l/email-protection#503c253329223f273c313e34696610373d31393c7e333f3d">Email Me</a
+						<a class="button" href="">Email Me</a
 						>
 						<a
 							class="button secondary"
 							href="https://www.linkedin.com/in/lucyrowland/"
 							>LinkedIn</a
 						>
+						<a class="button secondary" href="https://github.com/lucyrowland"
+						>GitHub</a>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer>
-			<p>Inspired by clean, minimal portfolio layou
+			<p>Website built by me in HTML and CSS. © Lucy Rowland</p>
