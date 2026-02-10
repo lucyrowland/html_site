@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>San Jose Earthquakes | Lucy Rowland</title>
+		<meta
+			name="description"
+			content="San Jose Earthquakes role details for Lucy Rowland."
+		/>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #b3b3b3;
+				--muted: #8f8f8f;
+				--heading: #f8fafc;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--line-accent: #3a3a3a;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 960px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.7;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				border-bottom: 2px solid var(--line);
+				background: rgba(10, 10, 10, 0.95);
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3rem 1.5rem 4rem;
+				display: grid;
+				gap: 2rem;
+			}
+
+			h1,
+			h2 {
+				color: var(--heading);
+			}
+
+			.card {
+				background: var(--card);
+				padding: 1.4rem 1.6rem;
+				border-radius: 4px;
+				border: 2px solid var(--line);
+				border-left: 4px solid var(--line-accent);
+				box-shadow: var(--shadow);
+			}
+
+			.card h2 {
+				margin-bottom: 0.6rem;
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.9px;
+			}
+
+			.card p + p {
+				margin-top: 1rem;
+			}
+
+			.meta {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			.meta + .meta {
+				margin-top: 0.35rem;
+			}
+
+			.grid {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.grid.two {
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			}
+
+			.timeline {
+				position: relative;
+			}
+
+			.timeline::before {
+				content: "";
+				position: absolute;
+				left: 0.7rem;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background: var(--line);
+				opacity: 0.5;
+			}
+
+			.timeline-item {
+				position: relative;
+				padding-left: 2rem;
+			}
+
+			.list {
+				display: grid;
+				gap: 0.6rem;
+				color: var(--muted);
+			}
+
+			.list strong {
+				color: var(--text);
+			}
+
+			.actions {
+				display: flex;
+				gap: 0.8rem;
+				flex-wrap: wrap;
+			}
+
+			.button {
+				background: var(--accent);
+				color: #0a0a0a;
+				padding: 0.6rem 1.1rem;
+				border-radius: 4px;
+				font-weight: 700;
+				border: 2px solid var(--accent);
+			}
+
+			.button.secondary {
+				background: transparent;
+				color: var(--text);
+				border: 2px solid var(--line);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<div class="actions">
+					<a class="button secondary" href="index.html">Back to Home</a>
+				</div>
+			</nav>
+		</header>
+
+		<main class="timeline">
+			<section class="card timeline-item">
+				<h1>San Jose Earthquakes</h1>
+				<p class="meta">Director of Soccer Analytics</p>
+				<p class="meta">February 2022 - June 2023</p>
+			</section>
+
+			<section class="card timeline-item">
+				<h2>Overview</h2>
+				<p>
+					I led the soccer analytics function within Soccer Operations,
+					supporting coaching staff, recruitment, and executive leadership in a
+					highly time-sensitive environment. The role was fully on-site and
+					closely embedded in daily training, match preparation, and transfer
+					activity.
+				</p>
+			</section>
+
+			<div class="grid two">
+				<section class="card timeline-item">
+					<h2>Match reporting</h2>
+					<p>
+						I designed and delivered pre-match opposition analysis focused on
+						tactical matchups, player-level threats, and areas of the pitch
+						where advantages or vulnerabilities were likely to emerge. These
+						reports were presented weekly, and more frequently during
+						congested match schedules, directly to coaches and senior
+						leadership.
+					</p>
+					<p>
+						Post-match analysis was delivered through Power BI dashboards,
+						supported by custom Python visualizations including shot maps,
+						passing networks, heatmaps, and player profiles. I designed all
+						visual standards to maximize football context and reduce
+						interpretation overhead for non-technical stakeholders.
+					</p>
+				</section>
+				<section class="card timeline-item">
+					<h2>Platform & recruitment</h2>
+					<p>
+						I built and maintained the club's backend data infrastructure,
+						ingesting match and player data across more than 30 global leagues
+						for scouting and recruitment. Pipelines were developed using
+						Python, SQL, Postgres, Dagster, and Docker, and were designed to
+						run continuously due to the global nature of the transfer market.
+					</p>
+					<p>
+						Recruitment analysis included player valuation, positional
+						prioritization, transfer market dynamics, and league-level pricing
+						patterns. I worked closely with the General Manager to support
+						budget-constrained decision making, identifying undervalued leagues
+						and player profiles likely to translate successfully to Major
+						League Soccer.
+					</p>
+				</section>
+			</div>
+
+			<section class="card timeline-item">
+				<h2>Leadership & additional work</h2>
+				<p>
+					I managed and mentored junior analysts, providing guidance on
+					programming practices, data visualization, presentation structure,
+					and analytical reasoning. I also supported hiring efforts, including
+					job design, resume review, and interviews.
+				</p>
+				<p>
+					Additional work included player development analysis,
+					ownership-level reporting on performance trends and playoff
+					probability, and ongoing monitoring of tactical and statistical
+					changes across MLS and global football.
+				</p>
+			</section>
+
+		</main>
+	</body>
+</html>

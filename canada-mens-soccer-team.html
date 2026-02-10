@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Canada Men's Soccer Team | Lucy Rowland</title>
+		<meta
+			name="description"
+			content="Canada Men's Soccer Team role details for Lucy Rowland."
+		/>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #b3b3b3;
+				--muted: #8f8f8f;
+				--heading: #f8fafc;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--line-accent: #3a3a3a;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 960px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.7;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				border-bottom: 2px solid var(--line);
+				background: rgba(10, 10, 10, 0.95);
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3rem 1.5rem 4rem;
+				display: grid;
+				gap: 2rem;
+			}
+
+			h1,
+			h2 {
+				color: var(--heading);
+			}
+
+			.card {
+				background: var(--card);
+				padding: 1.4rem 1.6rem;
+				border-radius: 4px;
+				border: 2px solid var(--line);
+				border-left: 4px solid var(--line-accent);
+				box-shadow: var(--shadow);
+			}
+
+			.card h2 {
+				margin-bottom: 0.6rem;
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.9px;
+			}
+
+			.card p + p {
+				margin-top: 1rem;
+			}
+
+			.meta {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
+
+			.meta + .meta {
+				margin-top: 0.35rem;
+			}
+
+			.grid {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.grid.two {
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			}
+
+			.timeline {
+				position: relative;
+			}
+
+			.timeline::before {
+				content: "";
+				position: absolute;
+				left: 0.7rem;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background: var(--line);
+				opacity: 0.5;
+			}
+
+			.timeline-item {
+				position: relative;
+				padding-left: 2rem;
+			}
+
+			.list {
+				display: grid;
+				gap: 0.6rem;
+				color: var(--muted);
+			}
+
+			.list strong {
+				color: var(--text);
+			}
+
+			.actions {
+				display: flex;
+				gap: 0.8rem;
+				flex-wrap: wrap;
+			}
+
+			.button {
+				background: var(--accent);
+				color: #0a0a0a;
+				padding: 0.6rem 1.1rem;
+				border-radius: 4px;
+				font-weight: 700;
+				border: 2px solid var(--accent);
+			}
+
+			.button.secondary {
+				background: transparent;
+				color: var(--text);
+				border: 2px solid var(--line);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<div class="actions">
+					<a class="button secondary" href="index.html">Back to Home</a>
+				</div>
+			</nav>
+		</header>
+
+		<main class="timeline">
+			<section class="card timeline-item">
+				<h1>Canadian Men's National Soccer Team</h1>
+				<p class="meta">Lead Analyst</p>
+				<p class="meta">January 2021 - December 2021</p>
+			</section>
+
+			<section class="card timeline-item">
+				<h2>Overview</h2>
+				<p>
+					I served as Lead Analyst for the Men's Senior National Team during
+					World Cup qualifying, working remotely between monthly international
+					camps held globally. The role supported coaches and players directly
+					in match preparation, review, and squad selection.
+				</p>
+			</section>
+
+			<div class="grid two">
+				<section class="card timeline-item">
+					<h2>Match reporting</h2>
+					<p>
+						I built and maintained post-match dashboards using Python and
+						Power BI, delivering analytical summaries to coaches and players
+						by the morning following each match. I engineered the team's first
+						data pipeline to ingest match event data and ensure reliable
+						delivery under tight timelines.
+					</p>
+				</section>
+				<section class="card timeline-item">
+					<h2>Opposition & squad support</h2>
+					<p>
+						Opposition analysis focused on identifying tactical patterns,
+						player tendencies, and areas where the team could adjust structure
+						or personnel. I advised the Head Coach on formation selection,
+						squad composition, and the evaluation of dual-national players.
+					</p>
+				</section>
+			</div>
+
+			<section class="card timeline-item">
+				<h2>Culture & camp support</h2>
+				<p>
+					I introduced structured data analysis into an environment with no
+					existing analytics infrastructure or budget, working closely with
+					staff to improve statistical literacy and establish shared language
+					around performance.
+				</p>
+				<p>
+					In addition to analytical responsibilities, I filmed and edited
+					training and match footage, produced video content for coaches and
+					players, built presentation materials, and supported meetings during
+					camps. I also worked with video analysts to integrate video and data
+					workflows.
+				</p>
+			</section>
+
+			<section class="card timeline-item">
+				<h2>Outcome</h2>
+				<p>
+					During qualifying, the team consistently exceeded performance
+					expectations, progressed rapidly in world rankings, and qualified
+					for the 2022 World Cup.
+				</p>
+			</section>
+
+		</main>
+	</body>
+</html>
