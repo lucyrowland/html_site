@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lucy Rowland | Portfolio</title>
+		<meta
+			name="description"
+			content="Portfolio of data analytics and graphics work by Lucy Rowland."
+		/>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0a0a0a;
+				--card: #111111;
+				--text: #f8fafc;
+				--muted: #b3b3b3;
+				--accent: #ffffff;
+				--line: #2c2c2c;
+				--shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+				--max: 1024px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Consolas", "SFMono-Regular", ui-monospace, monospace;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.7;
+				letter-spacing: 0.2px;
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+
+			a:hover {
+				border-bottom: 1px solid var(--accent);
+			}
+
+			header {
+				position: sticky;
+				top: 0;
+				background: rgba(10, 10, 10, 0.95);
+				border-bottom: 2px solid var(--line);
+				z-index: 10;
+			}
+
+			nav {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 1rem 1.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			nav .brand {
+				font-weight: 700;
+				letter-spacing: 1.4px;
+			}
+
+			nav ul {
+				list-style: none;
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			main {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 3.5rem 1.5rem 4rem;
+				display: grid;
+				gap: 3rem;
+			}
+
+			.hero {
+				border: 2px solid var(--line);
+				padding: 1.8rem;
+				background: var(--card);
+				box-shadow: var(--shadow);
+				display: grid;
+				gap: 0.8rem;
+			}
+
+			.hero p {
+				color: var(--muted);
+				max-width: 60ch;
+			}
+
+			/* ── Carousel ── */
+			.carousel-section {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.carousel-section h2 {
+				text-transform: uppercase;
+				font-size: 1rem;
+				letter-spacing: 0.7px;
+			}
+
+			.carousel-wrapper {
+				background: var(--card);
+				border: 2px solid var(--line);
+				box-shadow: var(--shadow);
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.carousel-track-container {
+				position: relative;
+				overflow: hidden;
+			}
+
+			.carousel-track {
+				display: flex;
+				transition: transform 0.35s ease;
+			}
+
+			.carousel-slide {
+				min-width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background: #000;
+			}
+
+			.carousel-slide img {
+				width: 100%;
+				max-height: 560px;
+				object-fit: contain;
+				display: block;
+			}
+
+			.carousel-caption {
+				width: 100%;
+				padding: 1rem 1.4rem;
+				background: var(--card);
+				border-top: 1px solid var(--line);
+			}
+
+			.carousel-caption p {
+				color: var(--muted);
+				font-size: 0.9rem;
+			}
+
+			.carousel-caption strong {
+				color: var(--text);
+				display: block;
+				margin-bottom: 0.25rem;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+				letter-spacing: 0.5px;
+			}
+
+			.carousel-controls {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0.75rem 1.4rem;
+				border-top: 1px solid var(--line);
+			}
+
+			.carousel-btn {
+				background: transparent;
+				border: 2px solid var(--line);
+				color: var(--text);
+				font-family: inherit;
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				padding: 0.45rem 0.9rem;
+				cursor: pointer;
+				border-radius: 4px;
+				transition: border-color 0.2s ease;
+			}
+
+			.carousel-btn:hover {
+				border-color: var(--accent);
+			}
+
+			.carousel-counter {
+				color: var(--muted);
+				font-size: 0.85rem;
+			}
+
+			.carousel-dots {
+				display: flex;
+				gap: 0.5rem;
+			}
+
+			.carousel-dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background: var(--line);
+				border: none;
+				cursor: pointer;
+				padding: 0;
+				transition: background 0.2s ease;
+			}
+
+			.carousel-dot.active {
+				background: var(--accent);
+			}
+
+			/* ── PDF Section ── */
+			.pdf-section {
+				display: grid;
+				gap: 1.2rem;
+			}
+
+			.pdf-section h2 {
+				text-transform: uppercase;
+				font-size: 1rem;
+				letter-spacing: 0.7px;
+			}
+
+			.pdf-grid {
+				display: grid;
+				gap: 1.1rem;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			}
+
+			.pdf-card {
+				background: var(--card);
+				border: 2px solid var(--line);
+				border-radius: 4px;
+				box-shadow: var(--shadow);
+				padding: 1.4rem;
+				display: grid;
+				gap: 0.6rem;
+				transition: border-color 0.2s ease, transform 0.2s ease;
+			}
+
+			.pdf-card:hover {
+				border-color: var(--accent);
+				transform: translateY(-2px);
+			}
+
+			.pdf-card h3 {
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			.pdf-card p {
+				color: var(--muted);
+				font-size: 0.9rem;
+			}
+
+			.pdf-icon {
+				font-size: 1.5rem;
+				line-height: 1;
+				color: var(--muted);
+			}
+
+			.pdf-link-label {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+				color: var(--accent);
+				border-bottom: none !important;
+			}
+
+			footer {
+				border-top: 2px solid var(--line);
+				padding: 2.5rem 1.5rem 3rem;
+				color: var(--muted);
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 0.85rem;
+			}
+
+			footer p {
+				margin-bottom: 0.6rem;
+			}
+
+			@media (max-width: 720px) {
+				nav {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.carousel-slide img {
+					max-height: 280px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="brand">Lucy Rowland</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<h1>Portfolio</h1>
+				<p>
+					A selection of data analytics and graphics work spanning player
+					profiling, match analysis, league-wide visualizations, and
+					reporting delivered to professional football organizations.
+				</p>
+			</section>
+
+			<!-- Image Carousel -->
+			<section class="carousel-section">
+				<h2>Data Graphics</h2>
+				<div class="carousel-wrapper">
+					<div class="carousel-track-container">
+						<div class="carousel-track" id="carouselTrack">
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-01-29 132714.png"
+									alt="Trinity Rodman player analytics dashboard"
+								/>
+								<div class="carousel-caption">
+									<strong>Player Profile · Trinity Rodman</strong>
+									<p>
+										Multi-panel analytics dashboard for Washington Spirit
+										winger Trinity Rodman. Combines heatmaps, zone-level
+										touch distributions, and per-90 bar charts into a
+										single-page player report.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-06-26 164628.png"
+									alt="DB Pridham NSL Golden Boot Leader profile"
+								/>
+								<div class="carousel-caption">
+									<strong>Player Profile · DB Pridham (BootUp Analytics)</strong>
+									<p>
+										Profile card for NSL Golden Boot leader DB Pridham of
+										Ottawa Rapid. Features a percentile radar, shot map with
+										xG sizing, and a key stats summary.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-06-27 121638.png"
+									alt="NSL pitch control VAEP heatmaps"
+								/>
+								<div class="carousel-caption">
+									<strong>League Analysis · NSL Pitch Control (BootUp Analytics)</strong>
+									<p>
+										Comparative VAEP-based pitch zone heatmaps across all
+										six Northern Super League clubs. Shows which areas of
+										the pitch each team dominates and where they concede
+										control.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-06-30 145607.png"
+									alt="Holly Ward winger percentile radar and heatmap"
+								/>
+								<div class="carousel-caption">
+									<strong>Player Profile · Holly Ward (BootUp Analytics)</strong>
+									<p>
+										Season profile for Vancouver Rise winger Holly Ward.
+										Includes a percentile radar benchmarked against all NSL
+										wingers, a line-breaking runs map, and an on-ball
+										activity heatmap.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-07-17 110316.png"
+									alt="Euro 2025 Final 8 xG rankings chart"
+								/>
+								<div class="carousel-caption">
+									<strong>Tournament Graphic · Euro 2025 xG Rankings (BootUp Analytics)</strong>
+									<p>
+										Social-ready bar chart ranking Euro 2025 Final 8 nations
+										by expected goals generated in the group stage. Built
+										for rapid public engagement around a live tournament.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2025-07-26 152353.png"
+									alt="Ottawa Rapid shooting dashboard"
+								/>
+								<div class="carousel-caption">
+									<strong>Team Dashboard · Ottawa Rapid Shooting (BootUp Analytics)</strong>
+									<p>
+										Shot and expected goals dashboard for Ottawa Rapid.
+										Aggregates shot location maps, body-part breakdowns,
+										attacking flank distribution, and per-player shot tallies
+										in a single view.
+									</p>
+								</div>
+							</div>
+
+							<div class="carousel-slide">
+								<img
+									src="portfolio/Screenshot 2026-03-05 115330.png"
+									alt="Mexico momentum analysis report"
+								/>
+								<div class="carousel-caption">
+									<strong>Match Report · Mexico Momentum Analysis</strong>
+									<p>
+										Opposition momentum analysis produced for national-team
+										preparation. Tracks momentum curves across multiple
+										matches alongside shotmaps, ball control losses, and
+										key physical metrics.
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="carousel-controls">
+						<button class="carousel-btn" id="prevBtn">&#8592; Prev</button>
+						<div class="carousel-dots" id="carouselDots"></div>
+						<span class="carousel-counter" id="carouselCounter">1 / 7</span>
+						<button class="carousel-btn" id="nextBtn">Next &#8594;</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- PDF Reports -->
+			<section class="pdf-section">
+				<h2>Reports</h2>
+				<div class="pdf-grid">
+
+					<a
+						class="pdf-card"
+						href="portfolio/AFC_Toronto_-_Opposition_Analysis_MD13_-_July_24__2025_watermarked.pdf"
+						target="_blank"
+						rel="noopener"
+					>
+						<div class="pdf-icon">&#x1F4C4;</div>
+						<h3>AFC Toronto &mdash; Opposition Analysis</h3>
+						<p>
+							Full pre-match opposition analysis report for AFC Toronto,
+							Matchday 13 (July 2025). Covers pressing triggers, defensive
+							shape, set pieces, and key player tendencies.
+						</p>
+						<span class="pdf-link-label">Open PDF &rarr;</span>
+					</a>
+
+					<a
+						class="pdf-card"
+						href="portfolio/SJEQ_2022_4_Match_Trend_Analysis_watermarked.pdf"
+						target="_blank"
+						rel="noopener"
+					>
+						<div class="pdf-icon">&#x1F4C4;</div>
+						<h3>San Jose Earthquakes &mdash; 4-Match Trend Analysis</h3>
+						<p>
+							Multi-match trend report produced during my tenure as Director
+							of Soccer Analytics at San Jose Earthquakes (2022). Tracks
+							performance trends across four consecutive matches to inform
+							coaching decisions.
+						</p>
+						<span class="pdf-link-label">Open PDF &rarr;</span>
+					</a>
+
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>Website built by me in HTML and CSS. &copy; Lucy Rowland</p>
+		</footer>
+
+		<script>
+			(function () {
+				const track = document.getElementById("carouselTrack");
+				const slides = track.querySelectorAll(".carousel-slide");
+				const counter = document.getElementById("carouselCounter");
+				const dotsContainer = document.getElementById("carouselDots");
+				const total = slides.length;
+				let current = 0;
+
+				// Build dots
+				for (let i = 0; i < total; i++) {
+					const dot = document.createElement("button");
+					dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+					dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+					dot.addEventListener("click", function () {
+						goTo(i);
+					});
+					dotsContainer.appendChild(dot);
+				}
+
+				function goTo(index) {
+					current = (index + total) % total;
+					track.style.transform = "translateX(-" + current * 100 + "%)";
+					counter.textContent = (current + 1) + " / " + total;
+					dotsContainer.querySelectorAll(".carousel-dot").forEach(function (d, i) {
+						d.classList.toggle("active", i === current);
+					});
+				}
+
+				document.getElementById("prevBtn").addEventListener("click", function () {
+					goTo(current - 1);
+				});
+
+				document.getElementById("nextBtn").addEventListener("click", function () {
+					goTo(current + 1);
+				});
+
+				// Keyboard navigation
+				document.addEventListener("keydown", function (e) {
+					if (e.key === "ArrowLeft") goTo(current - 1);
+					if (e.key === "ArrowRight") goTo(current + 1);
+				});
+			})();
+		</script>
+	</body>
+</html>
